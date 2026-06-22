@@ -1,0 +1,219 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* Layout */
+
+.container{
+    display:grid;
+    grid-template-columns:300px 1fr 350px;
+    min-height:100vh;
+}
+
+/* Left Panel */
+
+.left-panel{
+    background:#111827;
+    padding:30px;
+}
+
+.left-panel h1{
+    margin-bottom:30px;
+}
+
+.health-card{
+    text-align:center;
+}
+
+.circle{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:12px solid #22c55e;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:20px auto;
+}
+
+.circle span{
+    font-size:40px;
+    font-weight:bold;
+}
+
+.prediction{
+    background:#1e293b;
+    padding:20px;
+    margin-top:30px;
+    border-radius:15px;
+}
+
+/* Vehicle Area */
+
+.vehicle-area{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.vehicle{
+    position:relative;
+}
+
+.car{
+    font-size:250px;
+}
+
+/* Hotspots */
+
+.part{
+    position:absolute;
+    padding:10px 15px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.part:hover{
+    transform:scale(1.1);
+}
+
+.engine{
+    background:#f59e0b;
+    top:60px;
+    left:170px;
+}
+
+.brake{
+    background:#ef4444;
+    bottom:70px;
+    left:50px;
+}
+
+.battery{
+    background:#22c55e;
+    top:140px;
+    right:20px;
+}
+
+/* Right Panel */
+
+.right-panel{
+    background:#111827;
+    padding:30px;
+}
+
+#info-box{
+    margin-top:20px;
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    min-height:250px;
+}
+
+/* Tablet */
+
+@media(max-width:1024px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .car{
+        font-size:180px;
+    }
+
+    .left-panel,
+    .right-panel{
+        text-align:center;
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .container{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .vehicle-area{
+        order:2;
+    }
+
+    .right-panel{
+        order:3;
+    }
+
+    .car{
+        font-size:120px;
+    }
+
+    .circle{
+        width:130px;
+        height:130px;
+    }
+
+    .circle span{
+        font-size:28px;
+    }
+
+    .part{
+        font-size:11px;
+        padding:6px 8px;
+    }
+
+    .engine{
+        top:10px;
+        left:70px;
+    }
+
+    .battery{
+        top:55px;
+        right:-10px;
+    }
+
+    .brake{
+        bottom:10px;
+        left:10px;
+    }
+
+}
+
+/* Small Phones */
+
+@media(max-width:480px){
+
+    .car{
+        font-size:90px;
+    }
+
+    .engine{
+        top:-5px;
+        left:45px;
+    }
+
+    .battery{
+        top:35px;
+        right:-15px;
+    }
+
+    .brake{
+        bottom:0;
+        left:-5px;
+    }
+
+}

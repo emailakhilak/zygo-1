@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Digital Twin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Left Panel -->
+    <aside class="left-panel">
+        <h1>🚗 Vehicle Digital Twin</h1>
+
+        <div class="health-card">
+            <h3>Overall Health</h3>
+
+            <div class="circle">
+                <span>87%</span>
+            </div>
+        </div>
+
+        <div class="prediction">
+            <h3>Predicted Failure</h3>
+            <p>🔴 Brake Pad Wear</p>
+            <p>Estimated Time: 12 Days</p>
+        </div>
+    </aside>
+
+    <!-- Vehicle Section -->
+    <main class="vehicle-area">
+
+        <div class="vehicle">
+
+            <div class="part engine" onclick="showInfo('engine')">
+                Engine
+            </div>
+
+            <div class="part brake" onclick="showInfo('brake')">
+                Brake
+            </div>
+
+            <div class="part battery" onclick="showInfo('battery')">
+                Battery
+            </div>
+
+            <div class="car">
+                🚘
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Right Panel -->
+    <aside class="right-panel">
+
+        <h2>AI Diagnosis</h2>
+
+        <div id="info-box">
+            <h3>Select a Vehicle Part</h3>
+            <p>
+                Click on Engine, Brake or Battery
+                to view health information.
+            </p>
+        </div>
+
+    </aside>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
